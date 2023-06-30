@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Choose the FontAwesome library you want to use from the list below. Comment-out the others -->
+
+    <script defer src="fontawesome/js/solid.js"></script>
+    <script defer src="fontawesome/js/duotone.js"></script>
+    <script defer src="fontawesome/js/brands.js"></script>
+    <script defer src="fontawesome/js/light.js"></script>
+    <script defer src="fontawesome/js/regular.js"></script>
+    <script defer src="fontawesome/js/sharp-regular.js"></script>
+    <script defer src="fontawesome/js/sharp-solid.js"></script>
+    <script defer src="fontawesome/js/solid.js"></script>
+    <script defer src="fontawesome/js/thin.js"></script>
+
+    <!-- Keep the FontAwesome file below. -->
+
+    <script defer src="fontawesome/js/fontawesome.js"></script>
+    <title>Template</title>
+
+    <link rel="stylesheet" href="css/common.css" />
+    <script src="js/common.js"></script>
+
+    <style>
+      :root {
+        --fullHeight: calc(var(--vh, 1vh) * 100);
+        --fullWidth: calc(var(--vw, 1vw) * 100);
+        --themeColor: #6658d3;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      @font-face {
+        font-family: "HelveticaBlack";
+        src: url("fonts/HelveticaNeue/HelveticaNeueLTStd-Blk.otf")
+          format("opentype");
+      }
+
+      @font-face {
+        font-family: "Monseratt";
+        src: url("fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+          format("truetype");
+      }
+
+      @font-face {
+        font-family: "RobotoFlex";
+        src: url("fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf")
+          format("truetype");
+      }
+
+      .landingPage {
+        width: var(--fullWidth);
+        height: var(--fullHeight);
+        background-color: #c0c0c0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 80% 20%;
+        align-items: center;
+        justify-items: center;
+        font-family: "Monseratt";
+        font-size: 80px;
+        color: #606060;
+        background-image: url("./img/pexels-mark-mccammon-1080721.jpg");
+        background-size: cover;
+        background-position: center center;
+      }
+      .inputForm {
+        font-family: RobotoFlex;
+        font-size: 16px;
+        width: 500px;
+        background-color: white;
+        opacity: 0.9;
+      }
+      .footerRow {
+        background-color: #6658d3;
+        grid-row: 2;
+        height: 250px;
+        width: 250px;
+      }
+    </style>
+    <style>
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      // iOS Reset
+      input {
+        appearance: none;
+        border-radius: 0;
+      }
+
+      .card {
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 425px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px 0 rgba(#999, 0.25);
+        padding: 0.75rem;
+      }
+
+      .card-image {
+        border-radius: 8px;
+        overflow: hidden;
+        padding-bottom: 65%;
+        background-image: url("https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: 0 5%;
+        position: relative;
+      }
+
+      .card-heading {
+        position: absolute;
+        left: 10%;
+        top: 15%;
+        right: 10%;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #735400;
+        line-height: 1.222;
+        small {
+          display: block;
+          font-size: 0.75em;
+          font-weight: 400;
+          margin-top: 0.25em;
+        }
+      }
+
+      .card-form {
+        padding: 2rem 1rem 0;
+      }
+
+      .input {
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        padding-top: 1.5rem;
+        & + .input {
+          margin-top: 1.5rem;
+        }
+      }
+
+      .input-label {
+        color: #8597a3;
+        position: absolute;
+        top: 1.5rem;
+        transition: 0.25s ease;
+      }
+
+      .input-field {
+        border: 0;
+        z-index: 1;
+        background-color: transparent;
+        border-bottom: 2px solid #eee;
+        font: inherit;
+        font-size: 1.125rem;
+        padding: 0.25rem 0;
+        &:focus,
+        &:valid {
+          outline: 0;
+          border-bottom-color: #6658d3;
+          & + .input-label {
+            color: #6658d3;
+            transform: translateY(-1.5rem);
+          }
+        }
+      }
+
+      .action {
+        margin-top: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .action-button {
+        font: inherit;
+        font-size: 1.25rem;
+        padding: 1em;
+        width: 100%;
+        font-weight: 500;
+        background-color: #6658d3;
+        border-radius: 6px;
+        color: #fff;
+        border: 0;
+        &:focus {
+          outline: 0;
+        }
+      }
+
+      .card-info {
+        padding: 1rem 1rem;
+        text-align: center;
+        font-size: 0.875rem;
+        color: #8597a3;
+        a {
+          display: block;
+          color: #6658d3;
+          text-decoration: none;
+        }
+      }
+
+      .selectDropdown {
+        padding: 10px;
+        border-color: var(--themeColor);
+        margin-top: 10px;
+        width: 100%;
+        border-width: 2px;
+      }
+
+      .selectLabel {
+        color: var(--themecolor);
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="landingPage">
+      <div class="inputForm">
+        <!-- <form
+          action="mailto:you@yourdmainhere.com"
+          method="post"
+          enctype="text/plain"
+        >
+          FirstName: <input type="text" name="FirstName" /> Email:
+          <input type="text" name="Email" />
+          <input type="submit" name="submit" value="Submit" />
+        </form> -->
+        <form
+          class="card-form"
+          action="mailto:puritydisinfectionservices@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <div class="input">
+            <input type="text" name="fullname" class="input-field" />
+            <label class="input-label">Full Name</label>
+          </div>
+          <div class="input">
+            <input type="text" name="email" class="input-field" />
+            <label class="input-label">Email</label>
+          </div>
+          <div class="input">
+            <input type="text" name="phone" class="input-field" />
+            <label class="input-label">Phone</label>
+          </div>
+          <div>
+            <div class="selectLabel" style="color: #6658d3">Square Footage</div>
+            <select
+              class="selectDropdown"
+              name="squarefootage"
+              id="squarefootage"
+            >
+              <option value="under 1000>">Under 1000</option>
+              <option value="1000-2000">1000-2000</option>
+              <option value="2000-3000">2000-3000</option>
+              <option value="3000-4000">3000-4000</option>
+            </select>
+          </div>
+          <div class="action">
+            <button class="action-button">Request Free Estimate!</button>
+          </div>
+          <div class="footerRow"></div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

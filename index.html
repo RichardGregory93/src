@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/common.css" />
+    <script src="js/common.js"></script>
+
+    <!-- Choose the FontAwesome library you want to use from the list below. Comment-out the others -->
+
+    <script defer src="fontawesome/js/brands.js"></script>
+    <script defer src="fontawesome/js/duotone.js"></script>
+    <script defer src="fontawesome/js/light.js"></script>
+    <script defer src="fontawesome/js/regular.js"></script>
+    <script defer src="fontawesome/js/sharp-regular.js"></script>
+    <script defer src="fontawesome/js/sharp-solid.js"></script>
+    <script defer src="fontawesome/js/solid.js"></script>
+    <script defer src="fontawesome/js/thin.js"></script>
+
+    <!-- Keep the FontAwesome file below. -->
+
+    <script defer src="fontawesome/js/fontawesome.js"></script>
+
+    <title>Template</title>
+    <style>
+      :root {
+        --colorPrimary: #2e304b;
+        --colorSecondary: #fd8e8e;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      @font-face {
+        font-family: "HelveticaBlack";
+        src: url("fonts/HelveticaNeue/HelveticaNeueLTStd-Blk.otf")
+          format("opentype");
+      }
+
+      @font-face {
+        font-family: "RobotoFlex";
+        src: url("fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf")
+          format("truetype");
+      }
+      @font-face {
+        font-family: "HarmoniaBold";
+        src: url("fonts/Harmonia_Sans_Pro/Harmonia\ Sans\ W01\ Bold.otf")
+          format("opentype");
+      }
+
+      .landingPage {
+        width: var(--fullWidth);
+        height: var(--fullHeight);
+        background-color: var(--colorSecondary);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: center;
+        font-family: HarmoniaBold;
+        font-size: 50px;
+        color: var(--colorPrimary);
+      }
+      .leftSide {
+        background-color: var(--colorPrimary);
+        grid-column: 1;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+      }
+      .rightSide {
+        grid-column: 2;
+        width: 100%;
+        height: 100%;
+        background-image: url("img/headshot.jpg");
+        background-position: center center;
+        background-size: cover;
+      }
+
+      #gregory {
+        background-image: url("svg/logo-export.svg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 80%;
+        height: 40%;
+      }
+      .aboutMe {
+        width: 100%;
+        height: 100%;
+        background-color: #2e304b;
+        grid-row: 3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="landingPage">
+      <div class="leftSide">
+        Lorem Ipusm
+        <div id="gregory"></div>
+      </div>
+      <div class="rightSide"></div>
+      <div class="aboutMe">About Me</div>
+    </div>
+  </body>
+</html>
